@@ -1,0 +1,188 @@
+import {isIOS} from '../helper';
+
+const {StyleSheet, Dimensions} = require('react-native');
+const {height, width} = Dimensions.get('window');
+export const styles = StyleSheet.create({
+  imageStyle: {
+    height: '100%',
+    alignSelf: 'center',
+    resizeMode: 'cover',
+    position: 'absolute',
+  },
+  container: {flex: 1, position: 'relative'},
+  safeArea: {
+    flex: 1,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+  },
+  header: showInput => ({
+    height: '10',
+    flexDirection: 'row',
+    justifyContent: showInput ? 'space-between' : 'flex-end',
+    backgroundColor: showInput ? '#F9E79F' : null,
+    borderRadius: 50,
+    marginTop: 20,
+    marginHorizontal: 10,
+    opacity: 1,
+  }),
+  bkg: {},
+  input: {
+    marginStart: 15,
+    paddingVertical: isIOS ? 14 : 10,
+  },
+  tchStyle: showInput => ({
+    justifyContent: 'center',
+    paddingHorizontal: 12,
+    backgroundColor: '#F1C40F',
+    borderRadius: 28,
+    paddingVertical: 10,
+    position: showInput ? 'absolute' : null,
+    right: 0,
+  }),
+  searchList: {
+    marginTop: 8,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    position: 'absolute',
+    zIndex: 1,
+    top: 0,
+    elevation: 2,
+    width: '95%',
+    marginStart: 10,
+  },
+  tchSearch: showBorder => ({
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignContent: 'center',
+    textAlign: 'center',
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    borderBottomColor: 'gray',
+    borderBottomWidth: showBorder ? 1 : 0,
+  }),
+  searchText: {
+    marginLeft: 5,
+  },
+  cityTextView: {
+    marginHorizontal: 10,
+    justifyContent: 'center',
+    flex: 1,
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  cityText: {
+    color: 'black',
+    fontSize: 20,
+    fontWeight: '600',
+    marginTop: 30,
+  },
+  countryText: {
+    color: 'gray',
+    fontSize: 18,
+    fontWeight: '500',
+    marginTop: 30,
+  },
+  imgView: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  imgStyle: {
+    height: 165,
+    width: 165,
+    marginTop: 10,
+  },
+  degreeText: {
+    textAlign: 'center',
+    color: 'black',
+    fontSize: 60,
+    fontWeight: '600',
+    marginLeft: 5,
+  },
+  cloudyText: {
+    fontSize: 20,
+    textAlign: 'center',
+  },
+  otherItems: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 10,
+    width: '100%',
+    marginTop: 30,
+  },
+  weatherStatus: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  windImg: {
+    height: 30,
+    width: 30,
+  },
+  windImg2: {
+    height: 35,
+    width: 35,
+  },
+  km: {
+    color: 'black',
+    fontWeight: '500',
+    marginLeft: 5,
+  },
+  forcastViewMain: {
+    width: '100%',
+    position: 'absolute',
+    bottom: 0,
+    marginBottom: 20,
+    paddingHorizontal: 10,
+    left: 0,
+    right: 0,
+  },
+  forcastView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  forecastText: {
+    marginLeft: 10,
+    color: 'black',
+  },
+  forcastImageView: {
+    borderRadius: 20,
+    backgroundColor: '#F9E79F',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
+    paddingVertical: 10,
+    marginEnd: 10,
+    width: 100,
+    elevation: 8,
+    shadowColor: 'white',
+    shadowOpacity: 0.08,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+  },
+  forecastImg: {
+    width: 80,
+    height: 80,
+  },
+  days: {
+    fontSize: 13,
+    color: 'black',
+  },
+  celcious: {
+    fontSize: 18,
+    color: 'black',
+    fontWeight: '500',
+    marginBottom: 5,
+  },
+  loaderMainView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingText: {
+    color: 'black',
+    fontSize: 20,
+    marginTop: 20,
+  },
+});
